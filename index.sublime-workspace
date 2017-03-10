@@ -1,0 +1,238 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "const TelegramBot = require('node-telegram-bot-api');\n\n// replace the value below with the Telegram token you receive from @BotFather\nconst token = '350019979:AAHujxmTr7Tg9GYonNDZ_Va_E3gN6nzVB_A';\n\n// Create a bot that uses 'polling' to fetch new updates\nconst bot = new TelegramBot(token, {polling: true});\n\n// Matches \"[whatever] чего [whatever]\"\nbot.onText(/вступительные испытания|когда будут испытания?|когда будут испытания/, (msg, match) => {\n  // 'msg' is the received Message from Telegram\n  // 'match' is the result of executing the regexp above on the text content\n  // of the message\n  \n  const chatId = msg.chat.id;\n  bot.sendMessage(chatId, 'Все вступительные испытания могут быть пройдены в день подачи заявления. Абитуриенты Центра дистанционного обучения, подающие документы через ЭПК, проходят вступительные испытания в системе электронного тестирования по полученной ссылке в удобное время. Положительный результат автоматически засчитывается.') // the captured \"whatever\"\n\n  // send back the matched \"whatever\" to the chat\n  bot.sendMessage(chatId, resp);\n});\nbot.onText(/как проходят|испытания/, (msg, match) => {\n  const chatId = msg.chat.id;\n  bot.sendMessage(chatId, 'Абитуриенты, которые закончили учебное заведение в 2009 году и позже, поступают только на основании сертификатов ЕГЭ (не распространяется на выпускников профильных колледжей). Все представленные сертификаты ЕГЭ проходят экспертную проверку. Только после подтверждения подлинности представленных данных сертификат считается принятым, а вступительные испытания пройденными.В Московском Университете имени С.Ю.Витте (МИЭМП) нет возможности сдать, пересдать или досдать ЕГЭ, это обусловлено законодательством. Если  у вас закончился срок действия сертификата ЕГЭ, отсутствует какой-то предмет, который необходим для поступления, или полностью отсутствуют сертификаты ЕГЭ, пройти аттестацию в форме ЕГЭ вы можете в Центрах сдачи ЕГЭ (ссылка на нашем сайте). Сертификаты ЕГЭ действительны до 31 декабря года, следующего за годом выпуска.Для абитуриентов, получивших среднее полное общее образование до 1 января 2009 года, вступительные испытания проводятся в виде тестирования.Абитуриенты, имеющие среднее профессиональное образование соответствующего профиля или высшее образование, при приеме на обучение проходят вступительные испытания в виде собеседования или тестирования.Абитуриенты, подавшие документы через Электронную Приемную Комиссию и получившие идентификационный номер (логин) и ссылку для прохождения вступительных испытаний, могут пройти вступительные испытания, используя систему электронного тестирования из дома.Победители и призеры Всероссийских олимпиад школьников принимаются в Университет на внеконкурсной основе.Лица, имеющие среднее полное общее образование, полученное в образовательных учреждениях иностранных государств, поступают по результатам вступительных испытаний, проводимых Университетом для абитуриентов, имеющих среднее полное общее образование, полученное до 1 января 2009 г. Иностранные граждане, имеющие свидетельства о результатах ЕГЭ, вправе поступать на основании результатов ЕГЭ.') // the captured \"whatever\"\n  bot.sendMessage(chatId, resp);\n});\nbot.onText(/баллов ЕГЭ|ЕГЭ|единый государственный екзамен|егэ/, (msg, match) => {\n  // 'msg' is the received Message from Telegram\n  // 'match' is the result of executing the regexp above on the text content\n  // of the message\n  console.log(msg);\n  const chatId = msg.chat.id;\n  bot.sendMessage(chatId, 'Количество баллов ЕГЭ, необходимое для поступления в Московский Университет имени С.Ю.Витте (МИЭМП) в 2011 году:\\nиностранный язык – 20 баллов\\nрусский язык –  36 баллов\\nлитература –  32 балла\\nинформатика и ИКТ – 40 баллов\\nматематика – 24 балла\\nобществознание - 39 баллов\\nгеография - 35 баллов\\nистория - 30 баллов\\nфизика - 33 балла\\nбиология – 36 баллов') // the captured \"whatever\"\n\n  // send back the matched \"whatever\" to the chat\n  bot.sendMessage(chatId, resp);\n});\nbot.onText(/баллов необхожимо|баллов|вступительных испытаниях|форме тестирования|вступительном тесте|тесте/, (msg, match) => {\n  // 'msg' is the received Message from Telegram\n  // 'match' is the result of executing the regexp above on the text content\n  // of the message\n  console.log(msg);\n  const chatId = msg.chat.id;\n  bot.sendMessage(chatId, 'Не менее 40 баллов из 100.') // the captured \"whatever\"\n\n  // send back the matched \"whatever\" to the chat\n  bot.sendMessage(chatId, resp);\n});\nbot.onText(/бюджетную форму|бюджет|бюджетной/, (msg, match) => {\n  // 'msg' is the received Message from Telegram\n  // 'match' is the result of executing the regexp above on the text content\n  // of the message\n  console.log(msg);\n  const chatId = msg.chat.id;\n  bot.sendMessage(chatId, 'Количество бюджетных мест зависит от количества заявлений, поданных на конкурс.\\nУсловия участия в конкурсе:\\nполное законченно среднее образование;\\nпредоставление результатов ЕГЭ по трем предметам;\\nпоступление только на очную форму полного срока обучения.\\nПроходной балл для поступления на бюджетную форму обучения устанавливается по результатам конкурса среди всех абитуриентов, подавших заявки на установленное конкурсом направление подготовки.\\nБюджетные места по направлениям:\\nЭкономика\\nМенеджмент\\nЮриспруденция\\nРезультаты конкурса будут объявлены 29 июля 2011 года.\\nВ августе состоится второй этап конкурса на бюджетную форму обучения. Принять участие в конкурсе смогут абитуриенты, подавшие заявления в дополнительные сроки приема, а так же абитуриенты, не прошедшие конкурс на первом этапе.') // the captured \"whatever\"\n\n  // send back the matched \"whatever\" to the chat\n  bot.sendMessage(chatId, resp);\n});\nbot.onText(/документы.*иностранного|иностранного.*документы/, (msg, match) => {\n  // checks for /a.and.b.or.b.and.a/\n  const chatId = msg.chat.id;\n  bot.sendMessage(chatId, 'Паспорт\\nДокумент о предыдущем образовании (либо его копия)\\nИнформация о результатах ЕГЭ\\nВсе остальные документы можно донести позже.\\n\\nИностранным гражданам или гражданам стран СНГ необходимо предоставить следующие документы (при отсутствии в них русскоязычной страницы, обязателен нотариально-заверенный перевод документа на русский язык).\\nОригинал документа о предыдущем образовании и приложения к нему\\nПеревод документа о предыдущем образовании и приложения к нему\\nКопию паспорта\\nКопию визы на въезд в РФ, если прибыл в РФ по визе\\n4 фотографии 3х4\\nмиграционная карта (кроме Беларуси)\\nрегистрация (кроме Беларуси, Украины (до 90 дней пребывания после пересечения границы))\\nполис медицинского страхования, действующий на территории РФ (очная форма обучения)\\nмедицинская справка (для очной формы обучения)\\nсправка на ВИЧ (очная форма обучения)\\nесли абитуриент менял фамилию, документ об этом\\nсвидетельство об эквивалентности иностранного документа об образовании для всех документов о предыдущем образовании, за исключением:\\nдокументов, выданных на территории СССР до 15 мая 1992г;\\nаттестатов, свидетельств или дипломов о полном среднем образовании стран: Республика Беларусь, Азербайджанская Республика, Кыргызская Республика, Республика Абхазия, Республика Армения, Республика Казахстан, Республика Молдова, Республика Тёаджикистан, Республика Южная Осетия, Туркменистан, ') // the captured \"whatever\"\n\n  // send back the matched \"whatever\" to the chat\n  bot.sendMessage(chatId, resp);\n});\nbot.onText(/документы иностранцам|иностранцам|иностранных граждан/, (msg, match) => {\n  console.log(msg);\n  const chatId = msg.chat.id;\n  bot.sendMessage(chatId, '') // the captured \"whatever\"\n\n  // send back the matched \"whatever\" to the chat\n  bot.sendMessage(chatId, resp);\n});\n// Listen for any kind of message. There are different kinds of\n// messages.\n/*bot.on('message', (msg) => {\n  const chatId = msg.chat.id;\n  const url = 'https://media.giphy.com/media/iU2yJX5YKI9pe/giphy.gif';\n  // send a message to the chat acknowledging receipt of their message\n  bot.sendMessage(chatId, 'Meow');\n  bot.sendDocument(chatId, url);\n});*/",
+			"settings":
+			{
+				"buffer_size": 7984,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 129.0,
+		"last_filter": "save as",
+		"selected_items":
+		[
+			[
+				"save as",
+				"Project: Save As"
+			],
+			[
+				"save",
+				"Project: Save As"
+			],
+			[
+				"menu",
+				"View: Toggle Menu"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"open",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"view",
+				"View: Toggle Menu"
+			],
+			[
+				"prefere",
+				"Preferences: Settings"
+			],
+			[
+				"vmen",
+				"View: Toggle Menu"
+			],
+			[
+				"javas",
+				"Set Syntax: JavaScript"
+			]
+		],
+		"width": 571.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+	],
+	"find":
+	{
+		"height": 43.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7984,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								628,
+								628
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": false,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "index.js",
+	"replace":
+	{
+		"height": 80.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 188.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
